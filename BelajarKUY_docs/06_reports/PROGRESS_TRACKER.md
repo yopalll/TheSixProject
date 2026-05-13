@@ -13,7 +13,7 @@
 | Modul | Progress | Status |
 |-------|----------|--------|
 | Project Setup | 100% | 🟢 Selesai |
-| Database (Migrations + Models) | 50% | 🟡 On Progress |
+| Database (Migrations + Models) | 100% | 🟢 Selesai |
 | Auth System | 0% | 🔴 Belum |
 | Landing Page | 0% | 🔴 Belum |
 | Category CRUD | 0% | 🔴 Belum |
@@ -25,7 +25,7 @@
 | Review & Rating | 0% | 🔴 Belum |
 | Coupon System | 0% | 🔴 Belum |
 | Site Settings | 0% | 🔴 Belum |
-| **OVERALL** | **10%** | **🟡 On Progress** |
+| **OVERALL** | **15%** | **🟡 On Progress** |
 
 ---
 
@@ -35,6 +35,7 @@
 - Setup TailwindCSS + Vite
 - Semua 19 database migrations (Schema v2) — termasuk enrollments & lecture_completions baru
 - ERD HTML interaktif di BelajarKUY_docs/07_extras/ERD_BelajarKUY.html
+- Semua 19 Eloquent models dengan relationships, scopes, casts, accessors (verified 19/19 pass)
 
 ---
 
@@ -51,7 +52,8 @@ _(Belum ada item yang sedang dikerjakan)_
 - [x] Setup TailwindCSS + Vite
 - [x] Create all database migrations (19 tables — Schema v2)
 - [x] ERD HTML di BelajarKUY_docs
-- [ ] Create all Eloquent models (~18)
+- [x] Create all Eloquent models (19 models dengan relationships + scopes)
+- [ ] Create database seeders & factories
 - [ ] Create database seeders
 - [ ] Install & configure Breeze
 - [ ] Implement RoleMiddleware
@@ -121,9 +123,12 @@ _(Belum ada item yang sedang dikerjakan)_
 - Fixed: Duplicate index bug pada semua FK columns (foreignId() sudah auto-create index)
 - Fixed: dropIndex syntax di add_fields_to_users migration
 - Created: ERD HTML interaktif di BelajarKUY_docs/07_extras/ERD_BelajarKUY.html
+- Created: 19 Eloquent models (User, Category, SubCategory, Course, CourseGoal, CourseSection, CourseLecture, Wishlist, Cart, Coupon, Payment, Order, Enrollment, LectureCompletion, Review, Slider, InfoBox, Partner, SiteInfo)
+- Verified: 19/19 model instantiate + invoke semua relationship methods = PASS
+- Created: Daily report di BelajarKUY_docs/06_reports/REPORT_2026-05-13_DATABASE_LAYER.md
 - Updated: PROGRESS_TRACKER.md
-- Status: Migrations phase complete. Ready for Eloquent models.
-- Next: Create all Eloquent models (~18) dengan relationships
+- Status: Database layer complete. Ready for Auth System (Breeze + RoleMiddleware).
+- Next: Database seeders + factories, kemudian install Breeze
 - Created: `01_guides/UI_UX_GUIDELINES.md` sebagai panduan tim desainer & frontend.
 - Updated: `00_INDEX.md` untuk mencatat dokumen panduan baru.
 - Status: Planning phase for UI/UX is ready.
