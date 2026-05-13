@@ -4,7 +4,7 @@
 
 ---
 
-> **Update terakhir:** 13 Mei 2026 — 23:00 WIB oleh Kiro (AI Agent)
+> **Update terakhir:** 14 Mei 2026 — 00:15 WIB oleh Kiro (AI Agent)
 
 ---
 
@@ -36,6 +36,7 @@
 - Semua 19 database migrations (Schema v2) — termasuk enrollments & lecture_completions baru
 - ERD HTML interaktif di BelajarKUY_docs/07_extras/ERD_BelajarKUY.html
 - Semua 19 Eloquent models dengan relationships, scopes, casts, accessors (verified 19/19 pass)
+- Semua 19 factories + 5 seeders orchestrated (verified `migrate:fresh --seed` end-to-end PASS — 17 users, 15 courses, 360 lectures, 13 enrollments, 157 completions)
 
 ---
 
@@ -53,7 +54,7 @@ _(Belum ada item yang sedang dikerjakan)_
 - [x] Create all database migrations (19 tables — Schema v2)
 - [x] ERD HTML di BelajarKUY_docs
 - [x] Create all Eloquent models (19 models dengan relationships + scopes)
-- [ ] Create database seeders & factories
+- [x] Create database seeders & factories (19 factories + 5 seeders, verified end-to-end)
 - [ ] Create database seeders
 - [ ] Install & configure Breeze
 - [ ] Implement RoleMiddleware
@@ -118,6 +119,12 @@ _(Belum ada item yang sedang dikerjakan)_
 - Status: Documentation phase complete. Ready to start coding.
 - Next: Init Laravel 12 project (P0)
 
+### Session 2 — 13 Mei 2026 (Antigravity)
+- Created: `01_guides/UI_UX_GUIDELINES.md` sebagai panduan tim desainer & frontend.
+- Updated: `00_INDEX.md` untuk mencatat dokumen panduan baru.
+- Status: Planning phase for UI/UX is ready.
+- Next: Menunggu sketsa desain untuk mulai implementasi frontend.
+
 ### Session 3 — 13 Mei 2026 (Kiro)
 - Created: 19 database migration files sesuai DATABASE_SCHEMA.md v2
 - Fixed: Duplicate index bug pada semua FK columns (foreignId() sudah auto-create index)
@@ -129,10 +136,15 @@ _(Belum ada item yang sedang dikerjakan)_
 - Updated: PROGRESS_TRACKER.md
 - Status: Database layer complete. Ready for Auth System (Breeze + RoleMiddleware).
 - Next: Database seeders + factories, kemudian install Breeze
-- Created: `01_guides/UI_UX_GUIDELINES.md` sebagai panduan tim desainer & frontend.
-- Updated: `00_INDEX.md` untuk mencatat dokumen panduan baru.
-- Status: Planning phase for UI/UX is ready.
-- Next: Menunggu sketsa desain untuk mulai implementasi frontend.
+
+### Session 4 — 14 Mei 2026 (Kiro)
+- Created: 19 model factories (UserFactory diupdate dengan role states: student, instructor, admin)
+- Created: 5 seeders (UserSeeder, CategorySeeder, CourseSeeder, TransactionSeeder, CmsSeeder) orchestrated via DatabaseSeeder
+- Verified: `php artisan migrate:fresh --seed` → 22 migrations OK, 5 seeders OK (~2.7s total)
+- Seed result: 17 users, 8 categories, 31 sub-categories, 15 courses, 75 goals, 64 sections, 360 lectures, 33 wishlist, 22 cart, 10 coupons, 14 payments, 14 orders, 13 enrollments, 157 lecture completions, 5 reviews, 3 sliders, 4 info boxes, 7 partners, 10 site_info
+- Branch: `feature/database-seeders`
+- Status: Full database layer complete & verified end-to-end.
+- Next: Install Breeze + RoleMiddleware untuk auth system
 
 ---
 
