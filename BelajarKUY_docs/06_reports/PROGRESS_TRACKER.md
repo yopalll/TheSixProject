@@ -4,7 +4,7 @@
 
 ---
 
-> **Update terakhir:** 12 Mei 2026 — 12:30 WIB oleh Yosua Valentino
+> **Update terakhir:** 13 Mei 2026 — 21:27 WIB oleh Antigravity (AI Agent)
 
 ---
 
@@ -112,6 +112,12 @@ _(Belum ada item yang sedang dikerjakan)_
 - Cloned: Reference repo (YouTubeLMS) ke reference_repo/
 - Status: Documentation phase complete. Ready to start coding.
 - Next: Init Laravel 12 project (P0)
+
+### Session 2 — 13 Mei 2026 (Antigravity)
+- Created: `01_guides/UI_UX_GUIDELINES.md` sebagai panduan tim desainer & frontend.
+- Updated: `00_INDEX.md` untuk mencatat dokumen panduan baru.
+- Status: Planning phase for UI/UX is ready.
+- Next: Menunggu sketsa desain untuk mulai implementasi frontend.
 
 ---
 

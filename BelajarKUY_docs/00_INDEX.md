@@ -18,7 +18,8 @@ BelajarKUY_docs/
 │   ├── AGENT_GUIDELINES.md              ← System prompt untuk SEMUA AI agent
 │   ├── SETUP_GUIDE.md                   ← Cara install & setup project
 │   ├── GIT_WORKFLOW.md                  ← Branching strategy & commit rules
-│   └── CODING_STANDARDS.md              ← Konvensi kode Laravel 12
+│   ├── CODING_STANDARDS.md              ← Konvensi kode Laravel 12
+│   └── UI_UX_GUIDELINES.md              ← Panduan desain & implementasi frontend
 │
 ├── 02_architecture/
 │   ├── TECH_STACK.md                    ← Detail tech stack & versi
