@@ -4,7 +4,7 @@
 
 ---
 
-> **Update terakhir:** 14 Mei 2026 — 00:15 WIB oleh Kiro (AI Agent)
+> **Update terakhir:** 14 Mei 2026 — 02:00 WIB oleh Kiro (AI Agent)
 
 ---
 
@@ -145,6 +145,21 @@ _(Belum ada item yang sedang dikerjakan)_
 - Branch: `feature/database-seeders`
 - Status: Full database layer complete & verified end-to-end.
 - Next: Install Breeze + RoleMiddleware untuk auth system
+
+### Session 5 — 14 Mei 2026 (Kiro) — Docs Audit Cleanup
+- Executed all Must-Do + Should-Do items dari AUDIT_DOCS_REVIEW.md
+- Created: 13 new files (Glossary, Security, Testing, 7 ADRs, F13, F14, Changelog, Report)
+- Modified: 15 existing docs untuk sinkronisasi ke Schema v2
+- Removed: 1 outdated duplicate (DATABASE_MIGRATIONS_PROMPT.md)
+- Renamed: MODERN_TECH_STACK_RECOMMENDATIONS → TECH_STACK_EXTRAS
+- Key decisions documented di ADR:
+  * ADR-005: Payout out of scope
+  * ADR-006: Instructor auto-active
+  * ADR-007: Role naming duality (user/student)
+- Zero schema drift. Zero terminology contradiction. Glossary-driven clarity.
+- Branch: `docs/audit-cleanup`
+- Status: Documentation production-ready. AI agents bisa execute task tanpa ambiguitas.
+- Next: Phase 2 kickoff — Auth System (Albariqi)
 
 ---
 
