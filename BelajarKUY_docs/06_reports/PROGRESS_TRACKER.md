@@ -4,7 +4,7 @@
 
 ---
 
-> **Update terakhir:** 13 Mei 2026 — 21:27 WIB oleh Antigravity (AI Agent)
+> **Update terakhir:** 13 Mei 2026 — 23:00 WIB oleh Kiro (AI Agent)
 
 ---
 
@@ -13,7 +13,7 @@
 | Modul | Progress | Status |
 |-------|----------|--------|
 | Project Setup | 100% | 🟢 Selesai |
-| Database (Migrations + Models) | 0% | 🔴 Belum |
+| Database (Migrations + Models) | 50% | 🟡 On Progress |
 | Auth System | 0% | 🔴 Belum |
 | Landing Page | 0% | 🔴 Belum |
 | Category CRUD | 0% | 🔴 Belum |
@@ -25,7 +25,7 @@
 | Review & Rating | 0% | 🔴 Belum |
 | Coupon System | 0% | 🔴 Belum |
 | Site Settings | 0% | 🔴 Belum |
-| **OVERALL** | **5%** | **🟡 On Progress** |
+| **OVERALL** | **10%** | **🟡 On Progress** |
 
 ---
 
@@ -33,6 +33,8 @@
 
 - Init Laravel 12 project
 - Setup TailwindCSS + Vite
+- Semua 19 database migrations (Schema v2) — termasuk enrollments & lecture_completions baru
+- ERD HTML interaktif di BelajarKUY_docs/07_extras/ERD_BelajarKUY.html
 
 ---
 
@@ -47,7 +49,8 @@ _(Belum ada item yang sedang dikerjakan)_
 ### Phase 1: Foundation
 - [x] Init Laravel 12 project
 - [x] Setup TailwindCSS + Vite
-- [ ] Create all database migrations (~20)
+- [x] Create all database migrations (19 tables — Schema v2)
+- [x] ERD HTML di BelajarKUY_docs
 - [ ] Create all Eloquent models (~18)
 - [ ] Create database seeders
 - [ ] Install & configure Breeze
@@ -113,7 +116,14 @@ _(Belum ada item yang sedang dikerjakan)_
 - Status: Documentation phase complete. Ready to start coding.
 - Next: Init Laravel 12 project (P0)
 
-### Session 2 — 13 Mei 2026 (Antigravity)
+### Session 3 — 13 Mei 2026 (Kiro)
+- Created: 19 database migration files sesuai DATABASE_SCHEMA.md v2
+- Fixed: Duplicate index bug pada semua FK columns (foreignId() sudah auto-create index)
+- Fixed: dropIndex syntax di add_fields_to_users migration
+- Created: ERD HTML interaktif di BelajarKUY_docs/07_extras/ERD_BelajarKUY.html
+- Updated: PROGRESS_TRACKER.md
+- Status: Migrations phase complete. Ready for Eloquent models.
+- Next: Create all Eloquent models (~18) dengan relationships
 - Created: `01_guides/UI_UX_GUIDELINES.md` sebagai panduan tim desainer & frontend.
 - Updated: `00_INDEX.md` untuk mencatat dokumen panduan baru.
 - Status: Planning phase for UI/UX is ready.
