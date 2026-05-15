@@ -4,7 +4,7 @@
 
 ---
 
-> **Update terakhir:** 14 Mei 2026 — 02:00 WIB oleh Kiro (AI Agent)
+> **Update terakhir:** 15 Mei 2026 — 23:01 WIB oleh Antigravity (AI Agent)
 
 ---
 
@@ -14,7 +14,7 @@
 |-------|----------|--------|
 | Project Setup | 100% | 🟢 Selesai |
 | Database (Migrations + Models) | 100% | 🟢 Selesai |
-| Auth System | 0% | 🔴 Belum |
+| Auth System | 20% | 🟡 On Progress |
 | Landing Page | 0% | 🔴 Belum |
 | Category CRUD | 0% | 🔴 Belum |
 | Course CRUD (Instructor) | 0% | 🔴 Belum |
@@ -42,7 +42,7 @@
 
 ## 🔄 SEDANG DIKERJAKAN
 
-_(Belum ada item yang sedang dikerjakan)_
+- Fitur Auth System (Install Breeze, RoleMiddleware)
 
 ---
 
@@ -58,7 +58,7 @@ _(Belum ada item yang sedang dikerjakan)_
 - [ ] Create database seeders
 - [ ] Install & configure Breeze
 - [ ] Implement RoleMiddleware
-- [ ] Google OAuth setup
+- [x] Google OAuth setup
 - [ ] Separate login pages per role
 - [ ] Post-login redirect logic
 
@@ -160,6 +160,12 @@ _(Belum ada item yang sedang dikerjakan)_
 - Branch: `docs/audit-cleanup`
 - Status: Documentation production-ready. AI agents bisa execute task tanpa ambiguitas.
 - Next: Phase 2 kickoff — Auth System (Albariqi)
+
+### Session 6 — 15 Mei 2026 (Antigravity)
+- Executed: Setup Google OAuth pada `GoogleController.php` dan update dependencies
+- Branch: Pushed ke `auth` dan di-merge ke `main`
+- Status: Google OAuth setup selesai.
+- Next: Lanjutkan fitur Auth System lainnya (Install Breeze & RoleMiddleware).
 
 ---
 
