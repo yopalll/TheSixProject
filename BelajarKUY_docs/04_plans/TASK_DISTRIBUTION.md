@@ -6,13 +6,18 @@
 
 ## Summary Per Anggota
 
-| Anggota | Role | Area Tanggung Jawab | Est. Tasks |
-|---------|------|---------------------|------------|
-| **Yosua Valentino** | PM, Architect | Setup, DB, integrasi, code review | 10 |
-| **Albariqi Tarigan** | Backend Dev | Auth, Course CRUD, Instructor panel | 12 |
-| **Ray Nathan** | Backend Dev | Cart, Wishlist, Payment, Coupon | 11 |
-| **Vascha U** | Frontend Dev | Tampilan Frontend, Landing page, Student panel | 12 |
-| **Quinsha Ilmi** | UI/UX Dev | Tampilan UI/UX, Admin panel, Frontend components | 14 |
+| Anggota | Role | Area Lead | Collaborator Role |
+|---------|------|-----------|-------------------|
+| **Yosua Valentino** | PM & Architect | Setup, DB, integrasi, code review, testing oversight | — |
+| **Albariqi Tarigan** | Backend Lead (Auth + Course) | Auth, Course CRUD, Instructor panel, Course Player (backend) | — |
+| **Ray Nathan** | Backend Lead (Commerce) | Cart, Wishlist, Payment (Midtrans), Coupon | — |
+| **Vascha U** | Frontend Lead | Landing page, course detail, student panel, Course Player (frontend) | Admin panel UI |
+| **Quinsha Ilmi** | UI/UX Lead (Admin) | Admin panel, admin dashboard, admin CRUD | Frontend components |
+
+### Konvensi "Lead vs Collaborator"
+
+- **Lead** = owner fitur. Decision-maker, pastikan spec terpenuhi, buat PR utama.
+- **Collaborator** = membantu lead saat diminta. Bukan owner, tidak perlu hadir setiap meeting fitur tsb.
 
 ---
 
@@ -33,21 +38,26 @@
 ☐ Performance optimization & bug fix final
 ```
 
-### 2. Albariqi Tarigan (Backend — Auth & Course)
+### 2. Albariqi Tarigan (Backend Lead — Auth & Course)
 
 ```
+Lead:
 ☐ Install Laravel Breeze
 ☐ Customize registration (add role selection)
-☐ Implement RoleMiddleware
+☐ Implement RoleMiddleware (dengan alias 'student' → 'user')
 ☐ Setup Google OAuth (Socialite)
-☐ Create separate login pages (admin, instructor)
+☐ Create separate login pages (admin, instructor, student)
 ☐ Post-login redirect logic by role
 ☐ Course CRUD controller (instructor)
-☐ Course form + validation (StoreCourseRequest)
+☐ Course form + validation (StoreCourseRequest) — Cloudinary upload
 ☐ Dynamic subcategory loading (AJAX)
 ☐ Course Section CRUD
 ☐ Course Lecture CRUD
 ☐ Instructor dashboard + profile
+☐ Submit for review flow (draft → pending_review)
+☐ Course Player backend (F13)
+☐ Lecture completion tracking
+☐ Email integrations (Welcome, Course Approved, Course Rejected)
 ```
 
 ### 3. Ray Nathan (Backend — Commerce)
@@ -66,12 +76,14 @@
 ☐ Coupon apply logic at checkout
 ```
 
-### 4. Vascha U (Frontend)
+### 4. Vascha U (Frontend Lead)
 
 ```
-☐ Main layout (app.blade.php) with TailwindCSS
-☐ Admin layout (admin.blade.php)
+Lead:
+☐ Main layout (app.blade.php) with TailwindCSS + Alpine
+☐ Admin layout (admin.blade.php) — collaborate with Quinsha
 ☐ Instructor layout (instructor.blade.php)
+☐ Student layout (student.blade.php)
 ☐ Navbar component (responsive, cart badge, user menu)
 ☐ Footer component
 ☐ Hero slider section
@@ -79,27 +91,35 @@
 ☐ Course card component
 ☐ Featured courses section
 ☐ Course detail page (full)
+☐ Cart & Checkout page UI
 ☐ Student dashboard
-☐ Student enrolled courses page
+☐ Student enrolled courses page (with progress bars)
+☐ Course Player frontend (F13) — video embed, sidebar, progress
+☐ Live search component (Meilisearch + Alpine)
+☐ Toast/notification listener (Reverb events)
 ```
 
-### 5. Quinsha Ilmi (UI/UX — Admin & Frontend)
+### 5. Quinsha Ilmi (UI/UX Lead — Admin & Frontend)
 
 ```
-☐ Category CRUD (admin) + image upload
+Lead:
+☐ Admin layout (sidebar, topbar, content area)
+☐ Admin dashboard (stats + recent activity)
+☐ Category CRUD (admin) + image upload (Cloudinary)
 ☐ SubCategory CRUD (admin)
-☐ Admin dashboard with stats
-☐ Admin course management (approve/reject)
-☐ Admin instructor management (approve/block)
-☐ Admin order management (list + detail)
-☐ Admin user management
-☐ Slider CRUD (admin)
+☐ Admin course management (approve/reject flow) — ADR-006
+☐ Admin instructor LIST (view-only, no approve/block) — ADR-006
+☐ Admin order management (list + detail + filter)
+☐ Admin user list (view-only)
+☐ Slider CRUD (admin) — Cloudinary
 ☐ Info Box CRUD (admin)
-☐ Partner CRUD (admin)
-☐ Site Settings CRUD (key-value)
-☐ Mail/Midtrans/Google settings page
-☐ Review & Rating system
+☐ Partner CRUD (admin) — Cloudinary
+☐ Site Settings CRUD (key-value pairs)
 ☐ Admin review management (approve/reject)
+
+Collaborator (with Vascha):
+☐ Review & Rating system backend logic
+☐ Course card component polish
 ```
 
 ---

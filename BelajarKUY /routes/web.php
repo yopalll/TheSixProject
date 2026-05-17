@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\GoogleController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,6 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+<<<<<<< HEAD:BelajarKUY /routes/web.php
 use App\Http\Controllers\Admin\CategoryController;
 
 
@@ -28,4 +30,9 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::resource('categories', CategoryController::class)->except(['show']);
 });
 
+=======
+
+Route::get('/auth/google', [GoogleController::class, 'redirect'])->name('auth.google');
+Route::get('/auth/google-callback', [GoogleController::class, 'callback'])->name('auth.google.callback');
+>>>>>>> f7f211c5c2bc7355e3deca1280430c8b4026948d:BelajarKUY/routes/web.php
 require __DIR__.'/auth.php';
