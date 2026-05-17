@@ -18,4 +18,12 @@ export default {
     },
 
     plugins: [forms],
+    theme: {
+    extend: {
+        colors: {
+            primary: '#2563EB',
+            secondary: '#7C3AED',
+        },
+    },
+},
 };
